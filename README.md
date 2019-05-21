@@ -1,10 +1,10 @@
 # Realbook
 
-A Realbook style collection of sheetmusic, created with lilypond.
+A Realbook style collection of sheetmusic, created with [lilypond](http://lilypond.org).
 
 ## Design Goals
 
-+ should not require any scripting or templating in addition to lilypond/guile
++ should not require any scripting or templating in addition to lilypond/[guile](https://www.gnu.org/software/guile/)
 + should look as neat as the classics
 + should be transposable (_TODO_)
 
