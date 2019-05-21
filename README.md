@@ -11,11 +11,11 @@ A Realbook style collection of sheetmusic, created with [lilypond](http://lilypo
 ## Prerequisites
 
 + [lilypond](http://lilypond.org) 2.18 or newer(?)
-+ [make](https://www.gnu.org/software/make/)
++ [make](https://www.gnu.org/software/make/) (optional)
 
 ## Usage
 
-Run `make realbook` to create `realbook.pdf` containing all scores in the [./scores](./scores/) directory.
+Run `make realbook` to create `realbook.pdf` containing all scores in the [./scores](./scores/) directory, or simply run `lilypond -o realbook main.ly`
 
 To add music, create a score in the [./scores](./scores/) directory, and include it in [./scores/all.ly](./scores/all.ly).
 
