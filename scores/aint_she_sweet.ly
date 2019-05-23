@@ -21,7 +21,7 @@
       es1:9 | es:9 | bes2:6 bes:dim | c:m7 f:7 |
 
       bes2:6 es:9/b | c:m7 f:7 | bes:6 es:9/b | c:m7 f:7 |
-      bes2:6 d:7 | g:7 g:7.5+ | c:7 f:7 | bes:6 |
+      bes2:6 d:7 | g:7 g:7.5+ | c:7 f:7 | bes1:6 |
     }
 
     \new Staff \relative c'' {
