@@ -5,7 +5,7 @@
   \header {
     title = "Ain't She Sweet"
     composer = "M. Ager"
-    meter = #"Swing/Dixie"
+    meter = "Swing/Dixie"
   }
   <<
     \new ChordNames \chordmode {

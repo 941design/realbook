@@ -3,7 +3,7 @@
   \header {
     title = "(On the) Sunny Side of the Street"
     composer = "Jimmy McHugh"
-    meter = #"Medium Swing"
+    meter = "Medium Swing"
   }
   <<
     \new ChordNames \chordmode {

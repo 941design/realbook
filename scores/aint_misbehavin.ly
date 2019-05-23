@@ -5,7 +5,7 @@
   \header {
     title = "Ain't Misbehavin'"
     composer = "F. Waller"
-    meter = #"(Med. Swing)"
+    meter = "(Med. Swing)"
   }
   <<
     \new ChordNames \chordmode {

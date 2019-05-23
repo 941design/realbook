@@ -3,7 +3,7 @@
   \header {
     title = "Please Don't Talk About Me When I'm Gone"
     composer = "S. Stept"
-    meter = #"Swing"
+    meter = "Swing"
   }
   <<
     \new ChordNames \chordmode {
