@@ -22,6 +22,7 @@
     }
 
     \new Staff \relative c'' {
+      \numericTimeSignature
       \key es \major
 
       es4 g, bes8 es4 d8 ~ | d4 g, b8 d4 c8 ~ |c1 ~ | c4 bes as g |

@@ -25,6 +25,7 @@
     }
 
     \new Staff \relative c' {
+      \numericTimeSignature
       \key c \major
 
       \partial 4 { e8 d } \bar "||"

@@ -24,6 +24,7 @@
     }
     
     \new Staff \relative c' {
+    \numericTimeSignature
     \key es \major
 
     % TODO - start with bar ||:
