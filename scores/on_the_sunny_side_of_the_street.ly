@@ -50,7 +50,7 @@
 
       c4 d e g | e'2. e8 es | d4 c a f | e2 d |
       \break
-      c4 d e c' | b2. gis8 a | c4 a8 f r e d4 | c |
+      c4 d e c' | b2. gis8 a | c4 a8 f r e d4 | c1 |
       \break
       \bar "||"
 
