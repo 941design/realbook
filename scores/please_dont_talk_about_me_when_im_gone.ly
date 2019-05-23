@@ -7,6 +7,7 @@
   }
   <<
     \new ChordNames \chordmode {
+      \set chordChanges = ##t
 
       es1:6 | g:7 | c:7 | des2:13 c:7 |
       f1:9 | bes:13 | es2:6 c:7.9- | f:m7 bes:9 |
