@@ -11,6 +11,7 @@
   \override Score.TextScript.font-name = #"LilyJAZZ Text"
   \override Score.Clef #'break-visibility = #'#(#f #f #f)
   \override Score.KeySignature #'break-visibility = #'#(#f #f #f)
+  \override Score.SystemStartBar #'collapse-height = #1
 
   \jazzOn
 

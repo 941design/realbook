@@ -28,7 +28,6 @@ To add music, create a score in the [./scores](./scores/) directory, and include
 Pull requests welcome.
 
 + add LICENCE file
-+ add single bar at beginning of each line
 + create score overlay underneath header as in _the_ Realbook
 + create toc and title page
 + substitute ./scores/all.ly by lisp function, collecting all scores in alphabetical order from ./scores directory
