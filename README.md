@@ -36,8 +36,19 @@ Pull requests welcome.
 + test with newer lilypond version
 + if there are no legal issues, publish realbook.pdf as artifact
 + read scores location from environment variable and only default to ./scores
-+ display chords over more than one bar
-+ denote 4/4 measure as '4/4' instead of 'c)'
++ default globally to `\set chordChanges = ##t`, i.e. omit redundant chords repetitions over more than one bar
++ default globally to `\numericTimeSignature`, i.e. 4/4 measure as '4/4' instead of 'c)'
++ dynamically expand alternatives on demand
++ git commit hooks
+  + lint
+  + remove trailing whitespace
+  + replace tabs
+  + reindent
+  + use formatter (lilypond?, frescobaldi?)
++ build
+  + midi
+  + epub
+  + mp3?
 + create yeoman template for new scores, asking for:
   + title
   + composer
