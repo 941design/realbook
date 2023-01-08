@@ -1,4 +1,7 @@
-\require "lilyjazz"
+\version "2.24.0"
+%#(set-global-staff-size 22)
+\include "jazzchords.ily"
+\include "lilyjazz.ily"
 
 \layout {
 
@@ -8,13 +11,10 @@
 
   ragged-right = ##f
 
-  \override Score.TextScript.font-name = #"LilyJAZZ Text"
-  \override Score.Clef #'break-visibility = #'#(#f #f #f)
-  \override Score.KeySignature #'break-visibility = #'#(#f #f #f)
-  \override Score.SystemStartBar #'collapse-height = #1
-
-  \jazzOn
-
+  \override Score.TextScript.font-name = #"lilyjazz-text"
+  \override Score.Clef.break-visibility = #'#(#f #f #f)
+  \override Score.KeySignature.break-visibility = #'#(#f #f #f)
+  \override Score.SystemStartBar.collapse-height = #1
 }
 
 \book {
@@ -23,12 +23,7 @@
 
     indent = 0\mm
     tagline = ##f
-    ragged-bottom = ##t
-
-    #(define fonts
-       (set-global-fonts
-        #:roman "LilyJAZZ Text"
-        #:factor (/ staff-height pt 20)))
+    ragged-bottom = ##f
 
     scoreTitleMarkup = \markup {
       \fill-line {
