@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 
 \score {
 
@@ -32,7 +32,7 @@
       % http://lilypond.org/doc/v2.18/Documentation/notation/beams
       \set Timing.beamExceptions = #'()
 
-      r8 e'4 d8 c g f e ~ | \bar ".|" e1 | r8 e'4 d8 c g f e ~ | e1 |
+      r8 e'4 d8 c g f e ~ | \bar ".|-|" e1 | r8 e'4 d8 c g f e ~ | e1 |
       \break
       r8 g4 f8 e d c4 | c'4. a8~ a2 | r8 e f fis g c, dis e | c1 | r8 e'4 d8 c g f e ~ |
       \bar "||"
