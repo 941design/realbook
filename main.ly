@@ -1,19 +1,23 @@
-\require "lilyjazz"
+\version "2.26.0"
+
+% Resolve fonts through LilyPond's search path, including with -o /another/directory.
+#(ly:font-config-add-font
+   (ly:find-file "lilyjazz/supplementary-files/lilyjazz-text/lilyjazz-text.otf"))
+#(ly:font-config-add-font
+   (ly:find-file "lilyjazz/supplementary-files/lilyjazz-chord/lilyjazz-chord.otf"))
+\include "styles/lilyjazz.ily"
+\include "lilyjazz/stylesheet/jazzchords.ily"
 
 \layout {
 
-  \override Staff.Clef.stencil = ##f
-  \override Staff.TimeSignature.stencil = ##f
-  \override Staff.KeySignature.stencil = ##f
-
   ragged-right = ##f
 
-  \override Score.TextScript.font-name = #"LilyJAZZ Text"
-  \override Score.Clef #'break-visibility = #'#(#f #f #f)
-  \override Score.KeySignature #'break-visibility = #'#(#f #f #f)
-  \override Score.SystemStartBar #'collapse-height = #1
+  \override Score.TextScript.font-name = #"lilyjazz-text"
+  \override Score.Clef.break-visibility = ##(#f #f #f)
+  \override Score.KeySignature.break-visibility = ##(#f #f #f)
+  \override Score.SystemStartBar.collapse-height = #1
 
-  \jazzOn
+  \omit Score.BarNumber
 
 }
 
@@ -25,15 +29,10 @@
     tagline = ##f
     ragged-bottom = ##t
 
-    #(define fonts
-       (set-global-fonts
-        #:roman "LilyJAZZ Text"
-        #:factor (/ staff-height pt 20)))
-
     scoreTitleMarkup = \markup {
       \fill-line {
         \fontsize #1 \lower #1 \rotate #7 \fromproperty #'header:meter
-        \fontsize #8
+        \fontsize #7
         \override #'(offset . 7)
         \override #'(thickness . 6)
         \underline \fromproperty #'header:title

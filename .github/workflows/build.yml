@@ -1,0 +1,30 @@
+name: Build book
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install PDF inspection tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Install LilyPond 2.26.0
+        run: |
+          curl --fail --location --retry 3 \
+            https://gitlab.com/lilypond/lilypond/-/releases/v2.26.0/downloads/lilypond-2.26.0-linux-x86_64.tar.gz \
+            -o "$RUNNER_TEMP/lilypond.tar.gz"
+          printf '%s  %s\n' \
+            cd8a097a9f52cb2b9f4e7914774786f203f4fc61fcd299afcbb63c23fa5c6b24 \
+            "$RUNNER_TEMP/lilypond.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/lilypond.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lilypond-2.26.0/bin" >> "$GITHUB_PATH"
+      - name: Check book
+        run: make check
+      - name: Build PDF
+        run: make realbook LILYPOND_FLAGS=-dwarning-as-error

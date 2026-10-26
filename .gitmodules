@@ -1,0 +1,3 @@
+[submodule "lilyjazz"]
+	path = lilyjazz
+	url = https://github.com/OpenLilyPondFonts/lilyjazz.git
